@@ -2,23 +2,27 @@
 #include <cstring>  // string.h
 using namespace std;
 
+int myStrlen(const char* s) {
+	int count=0, i=0;
+
+
+	while (s[count] != NULL) { // or while (s[i] != 0) , while (s[i] != '\0')
+		count++;
+	}
+	return count;
+}
+
 int main() {
-	//char s1[] = { 'A', 'C', 'E', '\0' };
-	//char s1[] = { 'A', 'C', 'E'};  // !!!
-	//char s1[] = { 'A', 'C', 'E', NULL };	
-	//char s1[] = { 'A', 'C', 'E', 0 };
-	char s1[] = "ACE";
-	//char* ps1 = s1;
-	char* ps1 = &s1[0];
+	char s1[] = "ACE"; //array compoact initializer
+	const char* ps1 = "ACE~~~"; // string literal
 	cout << s1 << '\n';
-	cout << *ps1 << '\n';
 	cout << ps1 << '\n';
-	cout << *s1 << '\n';
-	cout << s1[1] << '\n';
-	cout << *(ps1 + 1) << '\n';
-	//*(ps1 + 2) = 'Z';
-	ps1[2] = 'Z';
-	cout << s1 << '\n';
+	//cout << strlen(s1) << '\n';
+	cout << strlen(&s1[0]) << '\n';
+	cout << strlen(ps1) << '\n';
+	cout << myStrlen(&s1[0]) << '\n';
+	cout << myStrlen(s1) << '\n';
+	cout << myStrlen(ps1) << '\n';
 
 	return 0;
 }
