@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <cstring>  // string.h
 using namespace std;
 
@@ -10,7 +10,7 @@ int myStrlen(const char* s) {
 	return count;
 }
 
-int main() {
+/*int main() {
 	char s1[] = "ACE";  // array compact initializer
 	const char* ps1 = "ACE~~~";  // string literal
 	cout << s1 << '\n';
@@ -23,4 +23,4 @@ int main() {
 	cout << myStrlen(ps1) << '\n';
 
 	return 0;
-}
+}*/
