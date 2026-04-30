@@ -3,18 +3,16 @@
 using namespace std;
 
 int myStrlen(const char* s) {
-	int count=0, i=0;
-
-
-	while (s[count] != NULL) { // or while (s[i] != 0) , while (s[i] != '\0')
+	int count = 0;
+	while (s[count] != '\0') {  // while(s[i] != 0) {  // while(s[i] != NULL) {
 		count++;
 	}
 	return count;
 }
 
 int main() {
-	char s1[] = "ACE"; //array compoact initializer
-	const char* ps1 = "ACE~~~"; // string literal
+	char s1[] = "ACE";  // array compact initializer
+	const char* ps1 = "ACE~~~";  // string literal
 	cout << s1 << '\n';
 	cout << ps1 << '\n';
 	//cout << strlen(s1) << '\n';
